@@ -8,5 +8,19 @@
         <div>
             <h1>Laura's Blog!</h1>
         </div>
+        <div>
+            {% for post in posts %}
+             <div>
+                <h3>** {{ post.title }}** </h3> 
+                <p>{{ post.text|linebreaksbr }}</p>
+                <p><i>{{ post.published_date }}</i></p>
+             </div>
+             {% endfor %}
+
+            <!-- {% for post in posts %}
+             {{post}} <br>
+             {% endfor %} -->
+            <!-- {{posts}}  vedo l'oggetto QuerySer -->
+        </div>
     </body>
 </html>
